@@ -3,9 +3,9 @@ apresentadores = {'PINHEIRO': 'Bom Dia Nação',
                   'BONNER': 'Jornal Brasileiro',
                   'VASCONCELOS': 'Jornal Brasileiro'}
 
-sobrenome = str(input("Digite o sobrenome do apresentador: ")).upper
+sobrenome = str(input("Digite o sobrenome do apresentador: ")).upper()
 
-if apresentadores[sobrenome]:
+if sobrenome in apresentadores:
     print(f"O apresentador apresenta o programa {apresentadores[sobrenome]}.")
 else:
     print("Apresentador(a) Desconhecido(a)!")
