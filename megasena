@@ -1,1 +1,29 @@
 
+import time 
+import random
+
+apostas = []
+jogo_de_acertos = []
+
+for numero in range(0,7):
+    while len(apostas) < 6:
+        tentativa = int(input("Digite um valor de 1 a 60: "))
+        if tentativa in apostas:
+            print("Numero já digitado\n")
+            #apostas.remove(tentativa[numero])
+        else:
+            apostas.append(tentativa)
+
+print("-----Vamos ao jogo!-----\n")
+
+for jogada in random.sample(range(1,61),6):
+    
+    jogo_de_acertos.append(jogada)
+    if jogada in apostas:
+        print(f"O primeiro numero é: {jogada} - Você acertou!") 
+    else:
+        print(f"O primeiro numero é: {jogada} - Você Errou!") 
+    time.sleep(1)
+
+print("\nJOGADOR: ", apostas)
+print("SORTEIO:", jogo_de_acertos)
